@@ -7,6 +7,9 @@ const connectDB=require("./src/config/database")
 const generateInterviewReport=require("./src/services/ai.service")
 connectDB()
 
-app.listen(3000,()=>{
-    console.log("server is running on tha port 3000")
-})
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server is running on port ${PORT}`);
+});
