@@ -1,8 +1,8 @@
 import axios from "axios"
-const api=axios.create({
-    baseURL:"http://localhost:3000",
-    withCredentials:true
-})
+const api = axios.create({
+    baseURL: "https://resume-genai-jheu.onrender.com",
+    withCredentials: true
+});
 export async function register({username,email,password}){
     try{
   const  response = await api.post('http://localhost:3000/api/auth/register',{
