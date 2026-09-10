@@ -11,11 +11,13 @@ app.use(cors({
     credentials: true
 }));
 
-// routes
+app.get("/", (req, res) => {
+    res.send("Res-GENAI Backend is running 🚀");
+});
+
 const authRouter = require("./routes/auth.routes");
 const interviewRouter = require("./routes/interview.routes");
 
-// using routes
 app.use("/api/auth", authRouter);
 app.use("/api/interview", interviewRouter);
 
